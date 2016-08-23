@@ -1,0 +1,34 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <base href="/">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'vendor/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+</head>
+
+<!-- apply our angular app -->
+<body ng-app="ConsentFormApp">
+
+    <div class="container">
+
+        <!-- views will be injected here -->
+        <div ui-view></div>
+
+    </div>
+
+    <!-- JS -->
+    <!-- load angular, nganimate, and ui-router -->
+    <script src="{% static 'vendor/js/angular.js' %}"></script>
+    <script src="{% static 'vendor/js/angular-ui-router.js' %}"></script>
+    <script src="{% static 'vendor/js/angular-animate.js' %}"></script>
+
+    <script src="{% static 'app/app.js' %}"></script>
+    <script src="{% static 'app/controllers/form.controller.js' %}"></script>
+
+</body>
+</html>
